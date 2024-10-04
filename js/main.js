@@ -21,17 +21,16 @@ const navigationListener = () => {
 
     // Function to handle the internal click event for active project list
     const handleInternalLinkClick = (e) => {
-        e.preventDefault(); // Prevent default navigation
-        e.stopImmediatePropagation(); // Stop other listeners for the same event
 
         // Push event to dataLayer
         window.dataLayer.push({
             'event': 'internal_link_click',
-            'url': e.target.href
+            'url': e.currentTarget.href, // href logged for debugging. Using current target instead due to nesting
+            'section': e.currentTarget.id
         });
 
         // Navigate after event pushing
-        window.location.href = e.target.href;
+        window.location.href = e.currentTarget.href;
     };
     // Loop through each link
     navLinks.forEach((link) => {
