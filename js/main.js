@@ -28,9 +28,6 @@ const navigationListener = () => {
             'url': e.currentTarget.href, // href logged for debugging. Using current target instead due to nesting
             'section': e.currentTarget.id
         });
-
-        // Navigate after event pushing
-        window.location.href = e.currentTarget.href;
     };
     // Loop through each link
     navLinks.forEach((link) => {
