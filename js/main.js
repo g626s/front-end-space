@@ -1,18 +1,17 @@
 // navListener declaration
-const navListener = () => {
-    const nav = document.querySelector('#nav');
-    const navUl = nav.querySelector('ul.nav.justify-content-center');
-    const navLinks = navUl.querySelectorAll('li.nav-item.mx-4 > a');
+const navigationListener = () => {
+    const navLinks = document.querySelectorAll('li.nav-item.mx-4 > a'); // navigation section HTML Collection list
+    const projectLists = document.querySelectorAll("#tools-list > div > a") // active project list section HTML Collection list
 
-    // Function to handle the click event
+    // Function to handle the navigation click event
     const handleNavClick = (e) => {
         e.preventDefault(); // Prevent default navigation
         e.stopImmediatePropagation(); // Stop other listeners for the same event
 
         // Push event to dataLayer
         window.dataLayer.push({
-            'event': 'nav_click',
-            'url': e.target.href, // log the href clicked for debugging
+            'event': 'nav_click', // name of the event 
+            'url': e.target.href, // href logged for debugging
             'nav_section': e.target.innerHTML // grab the clicked link's text
         });
 
@@ -20,6 +19,20 @@ const navListener = () => {
         window.location.href = e.target.href;
     };
 
+    // Function to handle the internal click event for active project list
+    const handleInternalLinkClick = (e) => {
+        e.preventDefault(); // Prevent default navigation
+        e.stopImmediatePropagation(); // Stop other listeners for the same event
+
+        // Push event to dataLayer
+        window.dataLayer.push({
+            'event': 'internal_link_click',
+            'url': e.target.href
+        });
+
+        // Navigate after event pushing
+        window.location.href = e.target.href;
+    };
     // Loop through each link
     navLinks.forEach((link) => {
         // Remove any existing event listener to avoid duplicates
@@ -27,6 +40,15 @@ const navListener = () => {
 
         // Attaching the event listener ensuring it only fires once
         link.addEventListener('click', handleNavClick, { once: true });
+    });
+
+    // Loop through each project link
+    projectLists.forEach((link) => {
+        // Remove any existing event listener to avoid duplicates
+        link.removeEventListener('click', handleInternalLinkClick);
+
+        // Attaching the event listener ensuring it only fires once
+        link.addEventListener('click', handleInternalLinkClick, { once: true });
     });
 };
 
@@ -114,7 +136,7 @@ const initializedEventListener = () => {
     }
 
     // Initialize navigation listener
-    navListener();
+    navigationListener();
 };
 
 // Reinitialize event listeners on navigation change

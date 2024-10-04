@@ -30,6 +30,8 @@ small > ul > li {
 
 #tools-list > div > a:hover {
     background-color: #0D6EFD;
+    transition-delay: 0.25s;
+    transition-duration: 0.15s;
 }
 
 #engagement-button {
