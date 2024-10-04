@@ -1,16 +1,42 @@
+// navListener declaration
+const navListener = () => {
+    const nav = document.querySelector('#nav');
+    const navUl = nav.querySelector('ul.nav.justify-content-center');
+    const navLinks = navUl.querySelectorAll('li.nav-item.mx-4 > a');
+
+    // Function to handle the click event
+    const handleNavClick = (e) => {
+        e.preventDefault(); // Prevent default navigation
+        e.stopImmediatePropagation(); // Stop other listeners for the same event
+
+        // Push event to dataLayer
+        window.dataLayer.push({
+            'event': 'nav_click',
+            'url': e.target.href, // log the href clicked for debugging
+            'nav_section': e.target.innerHTML // grab the clicked link's text
+        });
+
+        // Navigate after event pushing
+        window.location.href = e.target.href;
+    };
+
+    // Loop through each link
+    navLinks.forEach((link) => {
+        // Remove any existing event listener to avoid duplicates
+        link.removeEventListener('click', handleNavClick);
+
+        // Attaching the event listener ensuring it only fires once
+        link.addEventListener('click', handleNavClick, { once: true });
+    });
+};
+
+// initializedEventListener declaration
 const initializedEventListener = () => {
     // Engagement button and time display elements
     const button = document.querySelector('#engagement-button');
     const monoHours = document.querySelector('#mono-hours');
     const monoMinutes = document.querySelector('#mono-minutes');
-    if (!button || !monoHours || !monoMinutes) {
-        console.error(`Required elements not found in the DOM: 
-            engagement_button: ${button}, 
-            displayed_hours: ${monoHours}, 
-            displayed_minutes: ${monoMinutes}`
-        );
-        return;
-    }
+
     // Geography info of user engagement
     const geoInfo = Intl.DateTimeFormat().resolvedOptions().timeZone;
     const geoInfoArray = geoInfo.split('/');
@@ -67,16 +93,15 @@ const initializedEventListener = () => {
             button.addEventListener('click', handleButtonClick, { once: true });
             dataLayerPushed = false; // Allow dataLayer to be pushed again
         });
-        
+
         if (!dataLayerPushed) {
-            dataLayer.push({
+            window.dataLayer.push({
                 'event': 'user_click',
                 'hour_timestamp': paddedHours,
                 'minutes_timestamp': paddedMinutes,
                 'region': region,
                 'city': city
             });
-            console.log(dataLayer);
             dataLayerPushed = true; // Prevent dataLayer from being pushed again
         }
     };
@@ -87,7 +112,10 @@ const initializedEventListener = () => {
     if (button) {
         button.addEventListener('click', handleButtonClick, { once: true });
     }
-}
 
-// Reinitialize event listeners on relevant events
+    // Initialize navigation listener
+    navListener();
+};
+
+// Reinitialize event listeners on navigation change
 window.addEventListener('popstate', initializedEventListener); // or another event suitable for your navigation logic

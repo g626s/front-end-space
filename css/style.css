@@ -2,7 +2,7 @@
     background-color: var(--bs-body-color);
 }
 
-header>h1 {
+header > h1 {
     font-size: 5.5em;
 }
 
@@ -11,8 +11,25 @@ p {
     margin: 10px;
 }
 
+small > ul > li {
+    list-style: none;
+}
+
 #clock {
     font-size: 7.5em;
+}
+
+#other-tools-notice {
+    font-size: 1.25em;
+    margin: 0.5em;
+}
+
+#tools-list {
+    text-align: left;
+}
+
+#tools-list > div > a:hover {
+    background-color: #0D6EFD;
 }
 
 #engagement-button {
