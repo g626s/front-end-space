@@ -2,7 +2,7 @@
     background-color: var(--bs-body-color);
 }
 
-header > h1 {
+header>h1 {
     font-size: 5.5em;
 }
 
@@ -11,8 +11,23 @@ p {
     margin: 10px;
 }
 
-small > ul > li {
+small>ul>li {
     list-style: none;
+}
+
+svg {
+    color: #0DCAF0;
+}
+
+table {
+    table-layout: fixed;
+    width: 97% !important;
+    word-wrap: break-word;
+    margin: auto;
+}
+
+tbody>tr>td {
+    color: #0DCAF0 !important;
 }
 
 #clock {
@@ -28,13 +43,14 @@ small > ul > li {
     text-align: left;
 }
 
-#tools-list > div > a:hover {
+#tools-list>div>a:hover {
     background-color: #0D6EFD;
     transition-delay: 0.25s;
-    transition-duration: 0.15s;
+    transition-duration: 0.175s;
 }
 
-#engagement-button {
+#engagement-button,
+#engagement-button-url-parser {
     font-size: 1.5em;
     color: #ffffff;
     background: linear-gradient(#CA1919, #640C0C);
@@ -71,6 +87,37 @@ small > ul > li {
     align-self: center;
 }
 
+#uri-information-post {
+    margin: 1.5%;
+}
+
+#urls-explained,
+#urls-explained-text {
+    margin: 1.5%;
+}
+
+#urls-explained-text {
+    font-size: 2px;
+}
+
+#code-template {
+    background-color: #495057;
+    display: block;
+    width: 97%;
+    margin: auto auto 1.5% auto;
+    padding: 0.5%;
+}
+
+#code-template:hover {
+    background-color: #3a3d41;
+    color: #0DCAF0;
+}
+
+#strong-highlight {
+    border-bottom: 1px solid #0DCAF0;
+    color: #0DCAF0;
+}
+
 .strong {
     padding: 15px 30px;
     margin: 10px;
@@ -89,6 +136,7 @@ small > ul > li {
     font-family: "DM Mono", monospace;
     font-weight: 300;
     font-style: normal;
+    font-size: 12px;
 }
 
 .dm-mono-regular {
@@ -101,6 +149,21 @@ small > ul > li {
     font-family: "DM Mono", monospace;
     font-weight: 500;
     font-style: normal;
+}
+
+.info-group {
+    border: 1px solid #495057;
+    border-radius: 5px;
+    margin: auto auto 3.5% auto;
+}
+
+.line {
+    width: 97%;
+    margin: auto;
+}
+
+.list-group {
+    padding: 2%;
 }
 
 /*===================*/

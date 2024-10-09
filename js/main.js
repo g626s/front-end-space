@@ -1,7 +1,7 @@
 // navListener declaration
 const navigationListener = () => {
     const navLinks = document.querySelectorAll('li.nav-item.mx-4 > a'); // navigation section HTML Collection list
-    const projectLists = document.querySelectorAll("#tools-list > div > a") // active project list section HTML Collection list
+    const projectLists = document.querySelectorAll('#tools-list > div > a'); // active project list section HTML Collection list
 
     // Function to handle the navigation click event
     const handleNavClick = (e) => {
@@ -47,6 +47,118 @@ const navigationListener = () => {
         link.addEventListener('click', handleInternalLinkClick, { once: true });
     });
 };
+
+// urlSubmission declaration
+const urlSubmissionListener = () => {
+    // Select the button, input, and div elements
+    const btnUrlSubmission = document.querySelector("#engagement-button-url-parser");
+    const urlInputElem = document.querySelector('#url-input');
+    const divInfoPost = document.querySelector('#uri-information-post > div');
+    const sectionInfo = document.querySelector("#uri-information-post");
+
+    // Check if all required elements exist before proceeding
+    if (!btnUrlSubmission || !urlInputElem || !divInfoPost || !sectionInfo) {
+        console.error("One or more required elements not found in the DOM.");
+        return; // Exit the function if any element is missing
+    }
+
+    // Function to handle the submission of the URL event
+    function urlSubmit(e) {
+        e.preventDefault(); // stop default behavior
+        e.stopImmediatePropagation(); // Stop other listeners for the same event
+
+        // Push event to dataLayer
+        window.dataLayer.push({
+            'event': 'url_parser_submission_click', // name of the event 
+        });
+
+        const urlValue = urlInputElem.value;
+        try {
+            const urlSubmission = new URL(urlValue);
+            console.log(urlSubmission);
+
+            // Helper function to generate table rows only if the value exists
+            const generateTableRow = (label, value) => {
+                if (value) {
+                    return `
+                        <tr>
+                            <th scope="row">${label}:</th>
+                            <td>${value}</td>
+                        </tr>
+                    `;
+                }
+                return ''; // Return empty string if the value is null/empty
+            };
+
+            // DOM manipulation to create and append 'URL Components' and 'Query String' table
+            const urlComponentsSection = document.createElement('div');
+            urlComponentsSection.className = 'info-group';
+            urlComponentsSection.id = 'url-components-section'; // Assign an ID to identify later
+            urlComponentsSection.innerHTML = `
+                <h5 id="urls-explained">URL Components</h5>
+                <hr class="line">
+                <table class="table table-hover table-dark urls-explained-text dm-mono-light">
+                    <tbody>
+                        ${generateTableRow('Protocol', urlSubmission.protocol)}
+                        ${generateTableRow('Host', urlSubmission.host)}
+                        ${generateTableRow('Hostname', urlSubmission.hostname)}
+                        ${generateTableRow('Href', urlSubmission.href)}
+                        ${generateTableRow('Origin', urlSubmission.origin)}
+                        ${generateTableRow('Pathname', urlSubmission.pathname)}
+                        ${generateTableRow('Search', urlSubmission.search)}
+                        ${generateTableRow('Hash', urlSubmission.hash)}
+                    </tbody>
+                </table>
+                <hr class="line">
+                <h5 id="urls-explained">Query String</h5>
+                <hr class="line"></hr>
+                <table class="table table-hover table-dark urls-explained-text dm-mono-light">
+                    <tbody>
+                        ${generateTableRow("'utm_source'", urlSubmission.searchParams.get('utm_source'))}
+                        ${generateTableRow("'utm_medium'", urlSubmission.searchParams.get('utm_medium'))}
+                        ${generateTableRow("'utm_campaign'", urlSubmission.searchParams.get('utm_campaign'))}
+                        ${generateTableRow("'utm_term'", urlSubmission.searchParams.get('utm_term'))}
+                        ${generateTableRow("'utm_content'", urlSubmission.searchParams.get('utm_content'))}
+                    </tbody>
+                </table>
+            `;
+
+            // Insert the URL components section before the existing div
+            sectionInfo.insertBefore(urlComponentsSection, divInfoPost);
+
+            // Change the submit button to a reset button
+            btnUrlSubmission.textContent = 'Reset';
+            btnUrlSubmission.removeEventListener('click', urlSubmit); // Remove the submit listener
+            btnUrlSubmission.addEventListener('click', resetTool, { once: true }); // Add reset listener
+        } catch (error) {
+            console.error("Invalid URL:", error);
+        }
+    };
+
+    // Function to reset the tool
+    function resetTool(e) {
+        e.preventDefault(); // stop default behavior
+        e.stopImmediatePropagation();
+
+        // Clear the input field
+        urlInputElem.value = '';
+
+        // Remove the URL Components section
+        const urlComponentsSection = document.querySelector('#url-components-section');
+        if (urlComponentsSection) {
+            sectionInfo.removeChild(urlComponentsSection);
+        }
+
+        // Change the reset button back to a submit button
+        btnUrlSubmission.textContent = 'Submit';
+        btnUrlSubmission.removeEventListener('click', resetTool); // Remove reset listener
+        btnUrlSubmission.addEventListener('click', urlSubmit, { once: true }); // Add submit listener back
+    }
+
+    // Initially add the submit event listener
+    btnUrlSubmission.addEventListener('click', urlSubmit, { once: true });
+};
+
 
 // initializedEventListener declaration
 const initializedEventListener = () => {
@@ -95,7 +207,7 @@ const initializedEventListener = () => {
         // DOM manipulation to create and append a reset button
         let resetButton = document.createElement('button');
         resetButton.id = 'reset';
-        resetButton.className = "hvr-sweep-to-right-reset";
+        resetButton.className = 'hvr-sweep-to-right-reset';
         resetButton.innerHTML = 'Reset';
         document.body.appendChild(resetButton);
 
@@ -133,6 +245,9 @@ const initializedEventListener = () => {
 
     // Initialize navigation listener
     navigationListener();
+
+    // Initialize url submission listener
+    urlSubmissionListener();
 };
 
 // Reinitialize event listeners on navigation change
