@@ -26,8 +26,22 @@ table {
     margin: auto;
 }
 
+ul {
+    width: 97% !important;
+    word-wrap: break-word;
+    margin: auto;
+}
+
 tbody>tr>td {
     color: #0DCAF0 !important;
+}
+
+dt {
+    margin-top: 5%;
+}
+
+footer {
+    padding-bottom: 2.5%;
 }
 
 #clock {
@@ -116,6 +130,26 @@ tbody>tr>td {
 #strong-highlight {
     border-bottom: 1px solid #0DCAF0;
     color: #0DCAF0;
+}
+
+#strong-highlight-notice {
+    color: #0DCAF0;
+    bottom: 50%;
+    display: block;
+    margin: auto;
+    position: relative;
+    font-size: 14px;
+}
+
+#other-tools-mono-clock-project {
+    height: 150px;
+    overflow: scroll;
+    scroll-behavior: smooth;
+    scrollbar-color: #fff;
+}
+
+#reg-text {
+    text-align: left !important;
 }
 
 .strong {

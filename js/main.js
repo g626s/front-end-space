@@ -200,7 +200,7 @@ const initializedEventListener = () => {
 
         // DOM manipulation to create and append a message indicating user engagement
         let userEngagementText = document.createElement('p');
-        userEngagementText.id = 'notice';
+        userEngagementText.className = 'dm-mono-regular w-75 mx-auto';
         userEngagementText.innerHTML = `Hey there, thanks for playing! For extra brownie points, you're also located in <strong class="strong bob-on-hover">${city}</strong> and your region is in <strong class="strong bob-on-hover">${region}</strong>`;
         document.body.appendChild(userEngagementText);
 
