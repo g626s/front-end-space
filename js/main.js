@@ -56,6 +56,7 @@ const urlSubmissionListener = () => {
     const divInfoPost = document.querySelector('#uri-information-post > div');
     const sectionInfo = document.querySelector("#uri-information-post");
 
+
     // Check if all required elements exist before proceeding
     if (!btnUrlSubmission || !urlInputElem || !divInfoPost || !sectionInfo) {
         console.error("One or more required elements not found in the DOM.");
@@ -162,10 +163,11 @@ const urlSubmissionListener = () => {
 
 // initializedEventListener declaration
 const initializedEventListener = () => {
-    // Engagement button and time display elements
+    // Engagement button, footer, time display elements
     const button = document.querySelector('#engagement-button');
     const monoHours = document.querySelector('#mono-hours');
     const monoMinutes = document.querySelector('#mono-minutes');
+    const main = document.querySelector('main');
 
     // Geography info of user engagement
     const geoInfo = Intl.DateTimeFormat().resolvedOptions().timeZone;
@@ -199,24 +201,22 @@ const initializedEventListener = () => {
         monoMinutes.innerHTML = `${paddedMinutes} ${timePeriod}`;
 
         // DOM manipulation to create and append a message indicating user engagement
-        let userEngagementText = document.createElement('p');
-        userEngagementText.className = 'dm-mono-regular w-75 mx-auto';
-        userEngagementText.innerHTML = `Hey there, thanks for playing! For extra brownie points, you're also located in <strong class="strong bob-on-hover">${city}</strong> and your region is in <strong class="strong bob-on-hover">${region}</strong>`;
-        document.body.appendChild(userEngagementText);
+        let engagementSection = document.createElement('section');
+        engagementSection.id = 'engagement-section'
+        engagementSection.innerHTML = `
+            <p class="dm-mono-regular w-75 mx-auto">Hey there, thanks for playing! For extra brownie points, you're also located in <strong class="strong bob-on-hover">${city}</strong> and your region is in <strong class="strong bob-on-hover">${region}</strong></p>
+            <button id="reset" class="hvr-sweep-to-right-reset">Reset</button>
+        `;
 
-        // DOM manipulation to create and append a reset button
-        let resetButton = document.createElement('button');
-        resetButton.id = 'reset';
-        resetButton.className = 'hvr-sweep-to-right-reset';
-        resetButton.innerHTML = 'Reset';
-        document.body.appendChild(resetButton);
+        main.appendChild(engagementSection);
 
         // Add event listener for reset button
+        let resetButton = document.querySelector('#reset');
         resetButton.addEventListener('click', () => {
             monoHours.innerHTML = '00';
             monoMinutes.innerHTML = '00';
 
-            userEngagementText.remove();
+            engagementSection.remove();
             resetButton.remove();
 
             // Reattach the event listener to the button
