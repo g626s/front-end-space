@@ -1,4 +1,4 @@
-import { gSLVisitorsID as idFunc } from './js/ck.js';  
+import { gSLVisitorsID as idFunc } from './ck.js';  
 
 document.addEventListener("DOMContentLoaded", () => {
     window.dataLayer = window.dataLayer || [];
