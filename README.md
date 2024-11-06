@@ -1,6 +1,6 @@
 # Gestalt StudioLabs
 
-Welcome to **GStudioLabs**! This is my front space for everything related to **design, data, and development**. my overall goal is to have a holistic, integrated approach to solving complex problems, blending creativity and technology to deliver solutions that exceed the sum of their parts.
+Welcome to [**GStudioLabs**](https://g626s.github.io/front-end-space/)! This is my front space for everything related to **design, data, and development**. my overall goal is to have a holistic, integrated approach to solving complex problems, blending creativity and technology to deliver solutions that exceed the sum of their parts.
 
 At GStudioLabs, the best solutions come from viewing the entire picture. Combining **artistic creativity** with **technical expertise** to build cohesive, efficient, and future-ready digital products. My services are rooted in the principles of *Gestalt*, focusing on how design, data, and development work together to create something far greater than isolated efforts.
 
