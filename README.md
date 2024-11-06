@@ -12,4 +12,4 @@ The name **GStudioLabs** stems from the *Gestalt* philosophy—**the whole is gr
 
 If you're interested in collaborating with us or want to learn more about what we do, feel free to reach out!
 
-URL: 
+URL: (https://g626s.github.io/front-end-space/)
