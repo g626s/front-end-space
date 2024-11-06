@@ -58,6 +58,7 @@ footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    width: 98%;
 }
 
 #gstudiolabs-cm-window-dialog-content-buttons__manage-preferences-display {
@@ -88,6 +89,7 @@ footer {
     padding: 1.75%;
     border-radius: 6px;
     border: 2px solid #ffffff;
+    width: 98%;
 }
 
 #manage-preferences-form-exit {
