@@ -11,3 +11,5 @@ The name **GStudioLabs** stems from the *Gestalt* philosophy—**the whole is gr
 ## Get in Touch
 
 If you're interested in collaborating with us or want to learn more about what we do, feel free to reach out!
+
+URL: 
