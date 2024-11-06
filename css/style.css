@@ -1,5 +1,6 @@
 :root {
     background-color: var(--bs-body-color);
+    border-color: var(--bs-border-color);
 }
 
 header>h1 {
@@ -43,6 +44,57 @@ dt {
 footer {
     padding-bottom: 2.5%;
 }
+
+#cookie-banner-notice>div.gstudiolabs-cm-window-dialog-content {
+    display: flex;
+    justify-content: center;
+}
+
+#gstudiolabs-cm-window-dialog-content-buttons__manage-preferences-display {
+    padding: 1.5%;
+    border-radius: 6px;
+    border: 2px solid #ffffff;
+    text-align: left;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#gstudiolabs-cm-window-dialog-content-buttons__manage-preferences-display {
+    margin: 1% auto;
+    font-size: 0.75rem;
+    animation: show 700ms 100ms cubic-bezier(0.38, 0.97, 0.56, 0.76) forwards;
+    opacity: 0;
+    transform: rotateX(-90deg);
+    transform-origin: top center;
+}
+
+#gstudiolabs-cm-window-dialog-content-buttons__manage-preferences-display > div > ul {
+    list-style: none;
+    font-size: 1em;
+    align-items: baseline;
+}
+
+@keyframes show {
+    100% {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+#cookie-banner-notice {
+    margin: 1% auto;
+    display: inline-flex;
+    padding: 1.75%;
+    border-radius: 6px;
+    border: 2px solid #ffffff;
+}
+
+#manage-preferences-form-exit {
+    width: 18px; 
+    height: 18px; 
+}
+
 
 #clock {
     font-size: 7.5em;
@@ -150,6 +202,11 @@ footer {
 
 #reg-text {
     text-align: left !important;
+}
+
+.gstudiolabs-cm-window-dialog-content-buttons>button {
+    margin: 5%;
+    width: 250px;
 }
 
 .strong {

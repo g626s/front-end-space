@@ -1,4 +1,4 @@
-# GStudioLabs
+# Gestalt StudioLabs
 
 Welcome to **GStudioLabs**! This is my front space for everything related to **design, data, and development**. my overall goal is to have a holistic, integrated approach to solving complex problems, blending creativity and technology to deliver solutions that exceed the sum of their parts.
 
