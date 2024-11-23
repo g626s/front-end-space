@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
             'user_agent': navigator.userAgent,
             'mobile_user': navigator.userAgentData.mobile || 'not available',
             'platform': navigator.userAgentData.platform || 'not available',
-            'browser': navigator.userAgentData.brands[0].brand || 'not available'
+            'browser': navigator.userAgentData.brands || 'not available'
         }
     });
 
