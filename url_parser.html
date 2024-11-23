@@ -2,6 +2,16 @@
 <html lang="en">
 
 <head>
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-K7V9GL89');</script>
+    <!-- End Google Tag Manager -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -23,9 +33,15 @@
 </head>
 
 <body class="dm-mono-medium text-center" data-bs-theme="dark">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K7V9GL89" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <header>
-        <h1>URL Parser</h1>
-        <section id="nav" aria-labelledby="navigation-section">
+        <section id="page-title" aria-labelledby="page-title-section" class="container">
+            <h1>URL Parser</h1>
+        </section>
+        <section id="nav" aria-labelledby="navigation-section" class="container">
             <ul class="nav justify-content-center">
                 <li class="nav-item mx-4">
                     <!--SVG for "Home" start-->
@@ -67,7 +83,7 @@
         </section>
     </header>
     <main>
-        <section id="main-content" aria-labelledby="main-content-section">
+        <section id="main-content" aria-labelledby="main-content-section" class="container">
             <form id="enter-url" method="post" action="/submit_url">
                 <div class="form-group">
                     <h2 id="notice-for-page">
@@ -84,7 +100,7 @@
                     class="hvr-sweep-to-right">Submit</button>
             </form>
         </section>
-        <section id="uri-information-post" aria-labelledby="urls-explained" class="text-start w-75 mx-auto">
+        <section id="uri-information-post" aria-labelledby="urls-explained" class="text-start mx-auto container">
             <div class="info-group">
                 <h5 id="urls-explained">URLs Explained</h5>
                 <hr class="line">
@@ -216,8 +232,11 @@
         crossorigin="anonymous"></script>
     <!--Bootstrap script end-->
     <hr>
-    <footer class="dm-mono-light mx-auto w-75">&copy;2024-2024 Gestalt StudioLabs. There is also a sitemap. Feel free to
-        connect with me on LinkedIn. See <a href="cookie_banner.html">Cookie Banner</a></footer>
+    <section class="container">
+        <footer class="dm-mono-light mx-auto w-75">&copy;2024-2024 Gestalt StudioLabs. There is also a sitemap. Feel
+            free to
+            connect with me on LinkedIn. See <a href="cookie_banner.html">Cookie Banner</a></footer>
+    </section>
 </body>
 
 </html>

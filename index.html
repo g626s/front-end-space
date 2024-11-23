@@ -2,6 +2,16 @@
 <html lang="en">
 
 <head>
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-K7V9GL89');</script>
+    <!-- End Google Tag Manager -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -23,9 +33,15 @@
 </head>
 
 <body class="dm-mono-medium text-center" data-bs-theme="dark">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K7V9GL89" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <header>
-        <h1>About</h1>
-        <section id="nav" aria-labelledby="navigation-section">
+        <section id="page-title" aria-labelledby="page-title-section" class="container">
+            <h1>About</h1>
+        </section>
+        <section id="nav" aria-labelledby="navigation-section" class="container">
             <ul class="nav justify-content-center">
                 <li class="nav-item mx-4">
                     <!--SVG for "Home" start-->
@@ -67,26 +83,28 @@
         </section>
     </header>
     <main>
-        <section id="current-status" aria-labelledby="notice-for-page" class="notice">
+        <section id="about" aria-labelledby="about-section" class="container">
             <h2 id="notice-for-page">About Gestalt StudioLabs</h2>
-            <p id="reg-text" class="dm-mono-light mx-auto w-50">Hi, I'm Gus Sanchez. This site is currently serving as
+        </section>
+        <section id="current-status" aria-labelledby="notice-for-page" class="notice container">
+            <p id="reg-text" class="dm-mono-light mx-auto">Hi, I'm Gus Sanchez. This site is currently serving as
                 my front-end
                 workshop/space
                 for everything related to documenting my roadmap for front-end.</p>
-            <p id="reg-text" class="dm-mono-light mx-auto w-50">This might expand itself to evently being my current
+            <p id="reg-text" class="dm-mono-light mx-auto">This might expand itself to evently being my current
                 portfolio,
                 whether it be for articles, tutorials, and reflections on mostly on subjects related to front-end web
                 development, data engineering (off-topic...), and anything analytics.</p>
-            <p id="strong-highlight-notice" class="dm-mono-light mx-auto w-50">Note that any opinions expressed on this
+            <p id="strong-highlight-notice" class="dm-mono-light mx-auto">Note that any opinions expressed on this
                 site are strictly my own.
             </p>
             <hr class="mx-auto w-50">
-            <p id="reg-text" class="dm-mono-light mx-auto w-50">The term "Gestalt" originates from
+            <p id="reg-text" class="dm-mono-light mx-auto">The term "Gestalt" originates from
                 psychology and refers to a concept where the whole is perceived as more
                 than the sum of its parts. Whether it be in the context of data, front-end development, data
                 engineering, and web
                 analytics, the idea of Gestalt can be applied in several ways:</p>
-            <dl id="reg-text" class="dm-mono-light mx-auto w-50">
+            <dl id="reg-text" class="dm-mono-light mx-auto">
                 <dt>Front-End Development</dt>
                 <dd>In front-end development, Gestalt, in this context, refers to how users perceive the overall design,
                     functionality, and
@@ -127,8 +145,11 @@
         crossorigin="anonymous"></script>
     <!--Bootstrap script end-->
     <hr>
-    <footer class="dm-mono-light mx-auto w-75">&copy;2024-2024 Gestalt StudioLabs. There is also a sitemap. Feel free to
-        connect with me on LinkedIn. See <a href="cookie_banner.html">Cookie Banner</a></footer>
+    <section class="container">
+        <footer class="dm-mono-light mx-auto w-75">&copy;2024-2024 Gestalt StudioLabs. There is also a sitemap. Feel
+            free to
+            connect with me on LinkedIn. See <a href="cookie_banner.html">Cookie Banner</a></footer>
+    </section>
 </body>
 
 </html>

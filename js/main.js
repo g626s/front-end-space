@@ -202,9 +202,10 @@ const initializedEventListener = () => {
 
         // DOM manipulation to create and append a message indicating user engagement
         let engagementSection = document.createElement('section');
-        engagementSection.id = 'engagement-section'
+        engagementSection.id = 'engagement-section';
+        engagementSection.className = 'container';
         engagementSection.innerHTML = `
-            <p class="dm-mono-regular w-75 mx-auto">Hey there, thanks for playing! For extra brownie points, you're also located in <strong class="strong bob-on-hover">${city}</strong> and your region is in <strong class="strong bob-on-hover">${region}</strong></p>
+            <p class="dm-mono-regular interactivity-text">Hey there, thanks for playing! For extra brownie points, you're also located in <strong class="strong bob-on-hover">${city}</strong> and your region is in <strong class="strong bob-on-hover">${region}</strong></p>
             <button id="reset" class="hvr-sweep-to-right-reset">Reset</button>
         `;
 

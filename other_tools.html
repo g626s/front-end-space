@@ -2,6 +2,16 @@
 <html lang="en">
 
 <head>
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-K7V9GL89');</script>
+    <!-- End Google Tag Manager -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -23,9 +33,15 @@
 </head>
 
 <body class="dm-mono-medium text-center" data-bs-theme="dark">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K7V9GL89" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <header>
-        <h1>Other Tools</h1>
-        <section id="nav" aria-labelledby="navigation-section">
+        <section id="page-title" aria-labelledby="page-title-section" class="container">
+            <h1>Other Tools</h1>
+        </section>
+        <section id="nav" aria-labelledby="navigation-section" class="container">
             <ul class="nav justify-content-center">
                 <li class="nav-item mx-4">
                     <!--SVG for "Home" start-->
@@ -67,16 +83,16 @@
         </section>
     </header>
     <main>
-        <section id="current-status" aria-labelledby="notice-for-page" class="notice">
-            <h2 id="other-tools-notice">Other tools to check out for this front-end project space!</h2>
+        <section id="current-status" aria-labelledby="notice-for-page" class="notice container">
+            <h2 id="notice-for-page">Other tools to check out for this front-end project space!</h2>
         </section>
-        <section id="tools-list" aria-labelledby="list-for-other-tools" class="list">
+        <section id="tools-list" aria-labelledby="list-for-other-tools" class="list container">
             <div class="list-group">
                 <a href="mono_clock.html"
-                    class="list-group-item list-group-item-action flex-column align-items-start w-75 mx-auto"
+                    class="list-group-item list-group-item-action flex-column align-items-start mx-auto"
                     id="other-tools-mono-clock-project">
                     <div class="d-flex w-100 justify-content-between">
-                        <h2 class="mb-1">Mono Clock</h2>
+                        <h2>Mono Clock</h2>
                         <small>Last updated: 10.8.2024</small>
                     </div>
                     <p class="mb-3">Displays a interactive digital clock and allows user interaction to show
@@ -94,13 +110,13 @@
                     </small>
                 </a>
                 <a href="url_parser.html"
-                    class="list-group-item list-group-item-action flex-column align-items-start w-75 mx-auto"
+                    class="list-group-item list-group-item-action flex-column align-items-start mx-auto"
                     id="other-tools-mono-clock-project">
                     <div class="d-flex w-100 justify-content-between">
-                        <h2 class="mb-1">URL Parser</h2>
+                        <h2>URL Parser</h2>
                         <small>Last updated: 10.10.2024</small>
                     </div>
-                    <p class="mb-3">The URL Parser Tool is a web-based application designed to analyze and extract
+                    <p>The URL Parser Tool is a web-based application designed to analyze and extract
                         components from user-provided URLs. It enables users to enter a URL and receive detailed
                         information about its structure, including protocols, hosts, paths, and query parameters. The
                         tool aims to simplify the understanding of URL components and enhance users' ability to debug
@@ -114,13 +130,13 @@
                     </small>
                 </a>
                 <a href="cookie_banner.html"
-                    class="list-group-item list-group-item-action flex-column align-items-start w-75 mx-auto"
+                    class="list-group-item list-group-item-action flex-column align-items-start mx-auto"
                     id="other-tools-mono-clock-project">
                     <div class="d-flex w-100 justify-content-between">
-                        <h2 class="mb-1">Cookie Banner (Testing Only)</h2>
+                        <h2>Cookie Banner (Testing Only)</h2>
                         <small>Last updated: 11.6.2024</small>
                     </div>
-                    <p class="mb-3">This cookie banner is designed purely as a testing demonstration and is not intended
+                    <p>This cookie banner is designed purely as a testing demonstration and is not intended
                         for use as a functional or legally compliant cookie management tool. User consent decisions are
                         logged in the dataLayer to mimic how consent states might be tracked in analytics setups. Users
                         can open a "Manage Preferences" dialog to select or deselect cookie categories. The categories
@@ -131,7 +147,7 @@
                         Analytics (adds GSLC3).
                         After submission, cookie_active_groups updates in the dataLayer based on selected categories.
                     </p>
-                    <p class="mb-3">Key Features:
+                    <p>Key Features:
                     </p>
                     <small>
                         <ul>
@@ -140,7 +156,7 @@
                             <li>Preference Management</li>
                         </ul>
                     </small>
-                    <p class="mb-3">
+                    <p>
                         Disclaimer: This cookie banner project is for testing purposes only and is not intended to
                         fulfill legal compliance requirements. It does not manage real cookies and does not provide full
                         functionality as would a production-ready cookie consent solution.
@@ -155,8 +171,11 @@
         crossorigin="anonymous"></script>
     <!--Bootstrap script end-->
     <hr>
-    <footer class="dm-mono-light mx-auto w-75">&copy;2024-2024 Gestalt StudioLabs. There is also a sitemap. Feel free to
-        connect with me on LinkedIn. See <a href="cookie_banner.html">Cookie Banner</a></footer>
+    <section class="container">
+        <footer class="dm-mono-light mx-auto w-75">&copy;2024-2024 Gestalt StudioLabs. There is also a sitemap. Feel
+            free to
+            connect with me on LinkedIn. See <a href="cookie_banner.html">Cookie Banner</a></footer>
+    </section>
 </body>
 
 </html>

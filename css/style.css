@@ -3,10 +3,6 @@
     border-color: var(--bs-border-color);
 }
 
-header>h1 {
-    font-size: 5.5em;
-}
-
 p {
     font-size: 1.5em;
     margin: 10px;
@@ -41,8 +37,13 @@ dt {
     margin-top: 5%;
 }
 
-footer {
+.container>footer {
     padding-bottom: 2.5%;
+    font-size: 1em;
+}
+
+#page-title>h1 {
+    font-size: 5.5em;
 }
 
 #cookie-banner-notice>div.gstudiolabs-cm-window-dialog-content {
@@ -130,11 +131,9 @@ footer {
 }
 
 #interactivity {
-    display: inline-flex;
-    flex-direction: inherit;
-    padding: 2em;
-    margin: 2em;
-    justify-content: space-between;
+    font-size: 1.5em;
+    padding: 1em;
+    margin: 1em;
 }
 
 #notice {
@@ -144,10 +143,10 @@ footer {
 }
 
 #reset {
-    font-size: 1.5em;
+    font-size: 2.25em;
     color: #ffffff;
     background: linear-gradient(#1945ca, #280c64);
-    width: 5.5em;
+    width: 8.5em;
     height: fit-content;
     border-radius: 10px;
     border: none !important;
@@ -206,8 +205,20 @@ footer {
     text-align: left !important;
 }
 
+/*===============================*/
+/* Utility container
+/*===============================*/
+.container {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
 .gstudiolabs-cm-window-dialog-content-buttons>button {
-    margin: 5%;
+    padding: 0.5em;
+    margin: auto 0.75em 0.75em 0.75em;
     width: 250px;
 }
 
@@ -396,101 +407,586 @@ footer {
     transform: scaleX(1);
 }
 
-/*===================*/
+/*===============================*/
 /* Media queries for responsiveness
-/*===================*/
+/*===============================*/
 
-@media (max-width: 1200px) {
-
-    h1,
+/* 2xl */
+@media (max-width: 1536px) {
     #clock {
-        font-size: 4.5em;
-    }
-
-    p {
-        font-size: 1.3em;
+        font-size: 1.25em;
     }
 
     #engagement-button {
-        font-size: 1.3em;
-        width: 7.5em;
-        align-self: center;
+        font-size: 0.50em;
     }
 
     #reset {
-        font-size: 1.3em;
-        width: 4.5em;
+        font-size: 0.50em;
+        margin: 45px;
+    }
+
+    #nav > ul > li {
+        font-size: 1em;
+    }
+
+    #page-title>h1 {
+        font-size: 4em;
+    }
+
+    #notice-for-page {
+        font-size: 1.50em;
+    }
+
+    #current-status > p,
+    #reg-text {
+        font-size: 1em;
+    }
+
+    #clock {
+        margin: auto;
+    }
+
+    #clock > span {
+        font-size: 3em;
+    }
+
+    #interactivity,
+    #engagement-section {
+        font-size: 3em;
+    }
+
+    #cookie-banner {
+        padding: 1.50em;
+    }
+
+    #cookie-banner-notice {
+        font-size: 1.25em;
+    }
+
+    #content > h4#content-section {
+        font-size: 1.25em;
+    }
+
+    #content {
+        font-size: 1em;
+    }
+
+    div.d-flex.w-100.justify-content-between > h2 {
+        font-size: 1.75em;
+    }
+
+    div.list-group > a > small > ul {
+        font-size: 1.25em;
+    }
+
+    div.list-group > a {
+        height: 8.5em !important;   
+    }
+
+    .strong.bob-on-hover {
+        font-size: 1.75em;
+    }
+
+    .interactivity-text {
+        font-size: 0.5em;
+    }
+
+    .container>footer {
+        font-size: 1em;
+    }
+
+    .container {
+        max-width: 1280px;
     }
 }
 
-@media (max-width: 992px) {
-
-    h1,
+/* xl */
+@media (max-width: 1280px) {
     #clock {
-        font-size: 3.5em;
-    }
-
-    p {
-        font-size: 1.1em;
+        font-size: 1.25em;
     }
 
     #engagement-button {
-        font-size: 1.1em;
-        width: 6.5em;
-        align-self: center;
+        font-size: 0.50em;
     }
 
     #reset {
-        font-size: 1.1em;
+        font-size: 0.50em;
+        margin: 45px;
     }
 
-    #interactivity {
-        flex-direction: column;
+    #nav > ul > li {
+        font-size: 1em;
+    }
+
+    #page-title>h1 {
+        font-size: 3em;
+    }
+
+    #notice-for-page {
+        font-size: 1.50em;
+    }
+
+    #current-status > p,
+    #reg-text {
+        font-size: 1em;
+    }
+
+    #clock {
+        margin: auto;
+    }
+
+    #clock > span {
+        font-size: 3em;
+    }
+
+    #interactivity,
+    #engagement-section {
+        font-size: 3em;
+    }
+
+    #cookie-banner {
+        padding: 1.50em;
+    }
+
+    #cookie-banner-notice {
+        font-size: 1.25em;
+    }
+
+    #content > h4#content-section {
+        font-size: 1.25em;
+    }
+
+    #content {
+        font-size: 1em;
+    }
+
+    div.d-flex.w-100.justify-content-between > h2 {
+        font-size: 1.75em;
+    }
+
+    div.list-group > a > small > ul {
+        font-size: 1.25em;
+    }
+
+    div.list-group > a {
+        height: 8.5em !important;   
+    }
+
+    .strong.bob-on-hover {
+        font-size: 1.75em;
+    }
+
+    .interactivity-text {
+        font-size: 0.5em;
+    }
+
+    .container>footer {
+        font-size: 1em;
+    }
+
+    .container {
+        max-width: 1024px;
     }
 }
 
+/* lg */
+@media (max-width: 1024px) {
+    #clock {
+        font-size: 1.25em;
+    }
+
+    #engagement-button {
+        font-size: 0.50em;
+    }
+
+    #reset {
+        font-size: 0.50em;
+        margin: 45px;
+    }
+
+    #nav > ul > li {
+        font-size: 1em;
+    }
+
+    #page-title>h1 {
+        font-size: 3em;
+    }
+
+    #notice-for-page {
+        font-size: 1.50em;
+    }
+
+    #current-status > p,
+    #reg-text {
+        font-size: 1em;
+    }
+
+    #clock {
+        margin: auto;
+    }
+
+    #clock > span {
+        font-size: 3em;
+    }
+
+    #interactivity,
+    #engagement-section {
+        font-size: 3em;
+    }
+
+    #cookie-banner {
+        padding: 1.50em;
+    }
+
+    #cookie-banner-notice {
+        font-size: 1.25em;
+    }
+
+    #content > h4#content-section {
+        font-size: 1.25em;
+    }
+
+    #content {
+        font-size: 1em;
+    }
+
+    div.d-flex.w-100.justify-content-between > h2 {
+        font-size: 1.75em;
+    }
+
+    div.list-group > a > small > ul {
+        font-size: 1.25em;
+    }
+
+    div.list-group > a {
+        height: 8.5em !important;   
+    }
+
+    .strong.bob-on-hover {
+        font-size: 1.75em;
+    }
+
+    .interactivity-text {
+        font-size: 0.5em;
+    }
+
+    .container>footer {
+        font-size: 1em;
+    }
+
+    .container {
+        max-width: 768px;
+    }
+}
+
+/* md */
 @media (max-width: 768px) {
-
-    h1,
     #clock {
+        font-size: 1em;
+    }
+
+    #engagement-button {
+        font-size: 0.5em;
+    }
+
+    #reset {
+        font-size: 0.5em;
+        margin: 35px;
+    }
+
+    #nav > ul > li {
+        font-size: 0.75em;
+    }
+
+    #page-title>h1 {
+        font-size: 2.75em;
+    }
+
+    #notice-for-page {
+        font-size: 1.25em;
+    }
+
+    #current-status > p,
+    #reg-text {
+        font-size: 0.75em;
+    }
+
+    #clock {
+        margin: 2.25em;
+    }
+
+    #clock > span {
+        font-size: 2.75em;
+    }
+
+    #interactivity,
+    #engagement-section {
+        font-size: 2.75em;
+    }
+
+    #cookie-banner {
+        padding: 1.25em;
+    }
+
+    #cookie-banner-notice {
+        font-size: 1em;
+        display: grid;
+    }
+
+    #content > h4#content-section {
+        font-size: 1em;
+    }
+
+    #content {
+        font-size: 1em;
+    }
+
+    #cookie-banner-notice > div.gstudiolabs-cm-window-dialog-content-buttons.mx-auto {
+        padding-top: 1em;
+    }
+
+    button[id^="gstudiolabs"] {
+        font-size: 1em;
+    }
+
+    p[class^="gstudiolabs"] {
+    font-size: 1.25em;
+    }
+
+    div.d-flex.w-100.justify-content-between > h2 {
+        font-size: 1.50em;
+    }
+
+    div.list-group > a > small > ul {
+        font-size: 1em;
+    }
+
+    div.list-group > a {
+        height: 5em !important;   
+    }
+
+    .strong.bob-on-hover {
+        font-size: 1.5em;
+    }
+
+    .interactivity-text {
+        font-size: 0.5em;
+    }
+
+    .container>footer {
+        font-size: 0.75em;
+    }
+
+    .container {
+        max-width: 648px;
+    }
+}
+
+/* sm */
+@media (max-width: 648px) {
+    #clock {
+        font-size: 1em;
+    }
+
+    #engagement-button {
+        font-size: 0.5em;
+    }
+
+    #reset {
+        font-size: 0.5em;
+        margin: 35px;
+    }
+
+    #nav > ul > li {
+        font-size: 0.75em;
+    }
+
+    #page-title>h1 {
+        font-size: 2.75em;
+    }
+
+    #notice-for-page {
+        font-size: 1.25em;
+    }
+
+    #current-status > p,
+    #reg-text {
+        font-size: 0.75em;
+    }
+
+    #clock {
+        margin: 2.25em;
+    }
+
+    #clock > span {
+        font-size: 2.75em;
+    }
+
+    #interactivity,
+    #engagement-section {
+        font-size: 2.75em;
+    }
+
+    #cookie-banner {
+        padding: 1.25em;
+    }
+
+    #cookie-banner-notice {
+        font-size: 1em;
+        display: grid;
+    }
+
+    #content > h4#content-section {
+        font-size: 1em;
+    }
+
+    #content {
+        font-size: 1em;
+    }
+
+    #cookie-banner-notice > div.gstudiolabs-cm-window-dialog-content-buttons.mx-auto {
+        padding-top: 1em;
+    }
+
+    button[id^="gstudiolabs"] {
+        font-size: 1em;
+    }
+
+    p[class^="gstudiolabs"] {
+    font-size: 1.25em;
+    }
+
+    div.d-flex.w-100.justify-content-between > h2 {
+        font-size: 1.50em;
+    }
+
+    div.list-group > a > small > ul {
+        font-size: 1em;
+    }
+
+    div.list-group > a {
+        height: 5em !important;   
+    }
+
+    .strong.bob-on-hover {
+        font-size: 1.5em;
+    }
+
+    .interactivity-text {
+        font-size: 0.5em;
+    }
+
+    .container>footer {
+        font-size: 0.75em;
+    }
+
+    .container {
+        max-width: 475px;
+    }
+}
+
+/* xs */
+@media (max-width: 475px) {
+    #clock {
+        font-size: 1em;
+    }
+
+    #engagement-button {
+        font-size: 0.5em;
+    }
+
+    #reset {
+        font-size: 0.5em;
+        margin: 35px;
+    }
+
+    #nav > ul > li {
+        font-size: 0.5em;
+    }
+
+    #page-title>h1 {
         font-size: 2.5em;
     }
 
-    p {
+    #notice-for-page {
         font-size: 1em;
     }
 
-    #engagement-button {
-        font-size: 1em;
-        width: 5.5em;
-        align-self: center;
+    #current-status > p,
+    #reg-text {
+        font-size: 0.5em;
     }
 
-    #reset {
-        font-size: 1em;
-        margin: 60px;
-    }
-}
-
-@media (max-width: 576px) {
-
-    h1,
     #clock {
-        font-size: 2em;
+        margin: 2em;
     }
 
-    p {
-        font-size: 0.9em;
+    #clock > span {
+        font-size: 2.5em;
     }
 
-    #engagement-button {
-        font-size: 0.9em;
-        width: 4.5em;
-        align-self: center;
+    #interactivity,
+    #engagement-section {
+        font-size: 2.5em;
     }
 
-    #reset {
-        font-size: 0.9em;
-        margin: 60px;
+    #cookie-banner {
+        padding: 1em;
     }
+
+    #cookie-banner-notice {
+        font-size: 0.75em;
+        display: grid;
+    }
+
+    #content > h4#content-section {
+        font-size: 0.75em;
+    }
+
+    #content {
+        font-size: 0.75em;
+    }
+
+    #cookie-banner-notice > div.gstudiolabs-cm-window-dialog-content-buttons.mx-auto {
+        padding-top: 0.75em;
+    }
+
+    button[id^="gstudiolabs"] {
+        font-size: 1em;
+    }
+
+    p[class^="gstudiolabs"] {
+    font-size: 1em;
+    }
+
+    div.d-flex.w-100.justify-content-between > h2 {
+        font-size: 1.25em;
+    }
+
+    div.list-group > a > small > ul {
+        font-size: 0.75em;
+    }
+
+    div.list-group > a {
+        height: 5em !important;   
+    }
+
+    .strong.bob-on-hover {
+        font-size: 1.5em;
+    }
+
+    .interactivity-text {
+        font-size: 0.5em;
+    }
+
+    .container>footer {
+        font-size: 0.5em;
+    }
+
+    .container {
+        width: 50%;
+    }
+
 }
