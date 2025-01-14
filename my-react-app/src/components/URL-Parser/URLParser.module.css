@@ -1,0 +1,120 @@
+main > section:nth-child(2) {
+    margin-top: 10px;
+}
+
+#engagement_button {
+    font-size: 1.25em;
+    color: #ffffff;
+    background: linear-gradient(var(--main-glow), var(--main-glow-gradient));
+    width: 8.5em;
+    height: fit-content;
+    border-radius: 10px;
+    border: none !important;
+    margin-top: 0 1rem;
+}
+
+#urls_explained,
+#urls_explained_text {
+    margin: 1%;
+}
+
+#urls_explained_text > li {
+    margin: 0.5%;
+    color: var(--main-font);
+}
+
+#url_input {
+    color: var(--main-font) !important;
+}
+
+#strong_highlight {
+    border-bottom: 1px solid var(--main-glow);
+    color: var(--main-glow);
+}
+
+#code_template {
+    background-color: #495057;
+    display: block;
+    border-radius: 5px;
+    width: 98%;
+    margin: auto auto 1.5% auto;
+    padding: 0.5%;
+}
+
+#code_template:hover {
+    background-color: #3a3d41;
+    color: #0DCAF0;
+}
+
+#uri_information_post {
+    margin: 1.5%;
+}
+
+/* 
+Border radius for Table of URL Components.
+*/
+/* First row of th and td. */
+#url_components > tr:first-child > th {
+    border-radius: 10px 0 0 0; /*Top Left*/
+}
+
+#url_components > tr:first-child > td {
+    border-radius: 0 10px 0 0; /*Top Right*/
+}
+
+/* Last row of th and td. */
+#url_components > tr:last-child > th {
+    border-radius: 0 0 0 10px; /*Bottom Left*/
+}
+
+#url_components > tr:last-child > td {
+    border-radius: 0 0 10px 0; /*Bottom Right*/
+}
+
+/* 
+Border radius for Table of URL Query String.
+*/
+/* First row of th and td. */
+#url_querystring > tr:first-child > th {
+    border-radius: 10px 0 0 0; /*Top Left*/
+}
+
+#url_querystring > tr:first-child > td {
+    border-radius: 0 10px 0 0; /*Top Right*/
+}
+
+/* Last row of th and td. */
+#url_querystring > tr:last-child > th {
+    border-radius: 0 0 0 10px; /*Bottom Left*/
+}
+
+#url_querystring > tr:last-child > td {
+    border-radius: 0 0 10px 0; /*Bottom Right*/
+}
+
+.info_group {
+    border: 1.5px solid var(--main-glow);
+    border-radius: 5px;
+    margin: auto auto 3.5% auto;
+    width: 90%;
+}
+
+.line {
+    width: 97%;
+    margin: auto;
+}
+
+.table_dark {
+    --bs-table-bg: #292a2e;
+}
+
+table {
+    table-layout: fixed;
+    width: 97% !important;
+    word-wrap: break-word;
+    margin: auto;
+}
+
+hr {
+    color: var(--main-glow);
+}

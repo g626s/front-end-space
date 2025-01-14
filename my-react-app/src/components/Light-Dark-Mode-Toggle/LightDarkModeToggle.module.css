@@ -1,0 +1,24 @@
+.light_dark_mode_toggle {
+    position: absolute;
+    display: flex;
+    border: 1px solid var(--alternative-font);
+    border-radius: 50%;
+    right: 2em;
+    top: 1.25em;
+    padding: 0.25em;
+  }
+  
+  .light_dark_mode_toggle:hover {
+    transition: transform 250ms;
+    transform: translateY(-2px);
+    animation: shadows 2s infinite;
+    filter: invert(29%) sepia(69%) saturate(400%) hue-rotate(205deg) brightness(95%) contrast(88%);
+  }
+  
+  .light_dark_mode_toggle > svg {
+    color: var(--alternative-font);
+  }
+  
+  .light_dark_mode_toggle > svg > circle {
+    fill: var(--alternative-font);
+  }
