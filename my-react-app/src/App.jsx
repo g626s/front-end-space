@@ -49,12 +49,12 @@ function App() {
     <>
       <HeaderNavigation />
       <Routes>
-        <Route path="/front-end-space/react-version" element={<About />} />
-        <Route path="/front-end-space/react-version/other-tools" element={<OtherTools />} />
-        <Route path="/front-end-space/react-version/other-tools/mono-clock" element={<MonoClock />} />
-        <Route path="/front-end-space/react-version/other-tools/url-parser" element={<URLParser />} />
-        <Route path="/front-end-space/react-version/lab" element={<Lab />} />
-        <Route path="/front-end-space/react-version/contact" element={<Contact />} />
+        <Route path="/" element={<About />} />
+        <Route path="/other-tools" element={<OtherTools />} />
+        <Route path="/other-tools/mono-clock" element={<MonoClock />} />
+        <Route path="/other-tools/url-parser" element={<URLParser />} />
+        <Route path="/lab" element={<Lab />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
       <Sidebar />
       <Footer />

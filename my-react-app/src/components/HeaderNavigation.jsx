@@ -39,7 +39,7 @@ export default function HeaderNavigation() {
                                 <img src={homeSvg} alt="Home Icon" className="home-icon bob-on-hover" />
                             </div>
                             {/* --SVG for "Home" start-- */}
-                            <Link onClick={handleNavListener} to="/front-end-space/react-version" className="link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+                            <Link onClick={handleNavListener} to="/" className="link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
                                 aria-current="page">Home</Link>
                         </li>
                         <li className="nav-item mx-4">
@@ -48,7 +48,7 @@ export default function HeaderNavigation() {
                                 <img src={otherToolsSvg} alt="Other Tools Icon" className="other-tools-icon" />
                             </div>
                             {/* --SVG for "Other Tools" end-- */}
-                            <Link onClick={handleNavListener} to="/front-end-space/react-version/other-tools" className="link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Other Tools</Link>
+                            <Link onClick={handleNavListener} to="/other-tools" className="link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Other Tools</Link>
                         </li>
                         <li className="nav-item mx-4">
                             {/* --SVG for "Lab" start-- */}
@@ -56,7 +56,7 @@ export default function HeaderNavigation() {
                                 <img src={labSvg} alt="Lab Icon" className="lab-icon" />
                             </div>
                             {/* --SVG for "Lab" end-- */}
-                            <Link onClick={handleNavListener} to="/front-end-space/react-version/lab" className="link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Lab</Link>
+                            <Link onClick={handleNavListener} to="/lab" className="link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Lab</Link>
                         </li>
                         <li className="nav-item mx-4">
                             {/* --SVG for "Contact" start-- */}
@@ -64,7 +64,7 @@ export default function HeaderNavigation() {
                                 <img src={contactUs} alt="Contact icon" className="contact-icon" />
                             </div>
                             {/* --SVG for "Contact" end-- */}
-                            <Link onClick={handleNavListener} to="/front-end-space/react-version/contact" className="link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Contact</Link>
+                            <Link onClick={handleNavListener} to="/contact" className="link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Contact</Link>
                         </li>
                         <LightDarkModeToggle />
                     </ul>
