@@ -194,7 +194,10 @@ dt {
     font-size: 14px;
 }
 
-#other-tools-mono-clock-project {
+#other-tools-mono-clock-project,
+#other-tools-url-parser,
+#other-tools-cookie-banner,
+#other-tools-react-version {
     height: 125px;
     overflow: scroll;
     scroll-behavior: smooth;
