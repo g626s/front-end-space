@@ -6,7 +6,7 @@ import App from './App'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <Router basename="/front-end-space/react-version/">
+    <Router basename="/front-end-space">
       <Routes>
         <Route path="*" element={<App />} />
       </Routes>

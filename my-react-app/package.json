@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://g626s.github.io/front-end-space/react-version/",
+  "homepage": "https://g626s.github.io/front-end-space",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

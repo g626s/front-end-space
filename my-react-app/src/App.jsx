@@ -51,8 +51,8 @@ function App() {
       <Routes>
         <Route path="/" element={<About />} />
         <Route path="/other-tools" element={<OtherTools />} />
-        <Route path="/other-tools/mono-clock" element={<MonoClock />} />
-        <Route path="/other-tools/url-parser" element={<URLParser />} />
+        <Route path="/mono-clock" element={<MonoClock />} />
+        <Route path="/url-parser" element={<URLParser />} />
         <Route path="/lab" element={<Lab />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
